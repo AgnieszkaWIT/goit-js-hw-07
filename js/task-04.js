@@ -8,7 +8,7 @@ const firstBoxSize = 30;
 let lastBoxSize = 0;
 
 document.querySelector("[data-create]").addEventListener("click", () => {
-  amount = document.querySelector("input").value;
+  const amount = document.querySelector("input").value;
   createBoxes(amount);
 });
 
@@ -32,5 +32,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  
+  const boxesRoot = document.getElementById("boxes");
+  boxesRoot.innerHTML = "";
+  lastBoxSize = 0;
 }
