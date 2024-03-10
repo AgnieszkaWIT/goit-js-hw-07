@@ -38,5 +38,6 @@ function createBoxes(amount) {
 function destroyBoxes() {
   const boxesRoot = document.getElementById("boxes");
   boxesRoot.innerHTML = "";
+  document.querySelector("input").value = "";
   lastBoxSize = 0;
 }
