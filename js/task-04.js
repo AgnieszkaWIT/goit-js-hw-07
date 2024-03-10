@@ -21,7 +21,9 @@ function createBoxes(amount) {
 
   for (let i = 0; i < amount; i++) {
     const boxItem = document.createElement("div");
-    boxItem.style.width = "30px";
+    boxItem.style.width = `${
+      lastBoxSize > firstBoxSize ? lastBoxSize : firstBoxSize
+    }px`;
     boxItem.style.height = `${
       lastBoxSize > firstBoxSize ? lastBoxSize : firstBoxSize
     }px`;
